@@ -1,0 +1,27 @@
+services:
+  app:
+    image: odoo:18
+    volumes:
+      # Mount the source code
+      - ..:/workspace:cached
+    environment:
+      - PYTHONPATH=/src:/usr/lib/python3/dist-packages:/mnt/extra-addons
+    command: sleep infinity
+    # Required for VS Code to connect properly
+    init: true
+    network_mode: service:db
+    depends_on:
+      - db
+    user: root
+
+  db:
+    image: postgres:15
+    environment:
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_DB=odoo
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

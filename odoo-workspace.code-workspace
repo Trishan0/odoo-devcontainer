@@ -1,0 +1,66 @@
+{
+    "folders": [
+        {
+            "path": "/workspace",
+            "name": "Workspace"
+        },
+        {
+            "path": "/usr/lib/python3/dist-packages/odoo/addons",
+            "name": "Odoo Core Addons"
+        }
+    ],
+    "settings": {
+        "files.exclude": {
+            "**/.git": true,
+            "**/.svn": true,
+            "**/.hg": true,
+            "**/CVS": true,
+            "**/.DS_Store": true
+        },
+        "python.defaultInterpreterPath": "/usr/bin/python3",
+        "editor.formatOnSave": true,
+        "explorer.autoReveal": true,
+        "explorer.expandSingleFolderWorkspaces": true,
+        "workbench.startupEditor": "none",
+        "explorer.compactFolders": false
+    },
+    "launch": {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "Python: Odoo",
+                "type": "debugpy",
+                "request": "launch",
+                "module": "odoo",
+                "args": [
+                    "--config=/workspace/odoo_config/odoo.conf",
+                ],
+                "justMyCode": false,
+                "console": "integratedTerminal"
+            },
+            {
+                "name": "Python: Odoo Initial Setup",
+                "type": "debugpy",
+                "request": "launch",
+                "module": "odoo",
+                "args": [
+                    "--config=/workspace/odoo_config/odoo.conf",
+                    "--init=base",
+                    "--stop-after-init"
+                ],
+                "justMyCode": false,
+                "console": "integratedTerminal"
+            }
+        ],
+        "compounds": []
+    },
+    "extensions": {
+        "recommendations": [
+            "ms-python.python",
+            "ms-python.debugpy",
+            "ms-python.vscode-pylance",
+            "ms-python.black-formatter",
+            "cweijan.vscode-postgresql-client2"
+        ]
+    }
+}
