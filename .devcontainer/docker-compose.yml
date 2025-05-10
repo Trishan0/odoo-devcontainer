@@ -1,6 +1,6 @@
 services:
   app:
-    image: odoo:18
+    image: odoo:17
     volumes:
       # Mount the source code
       - ..:/workspace:cached
