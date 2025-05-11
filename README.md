@@ -147,4 +147,4 @@ Feel free to open issues or submit pull requests to improve this development env
 
 ## License
 
-[Your License Here]
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Trishan0/odoo-devcontainer/blob/master/LICENSE)
