@@ -30,14 +30,14 @@
 				"mvintg.odoo-file",
 				"odoo.odoo",
 				"trinhanhngoc.vscode-odoo",
-				"odoo.owl-vision",
+				"odoo.owl-vision"
 				
 			]
 		}
 	},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [
-		8079
+		8069
 	],
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "pip install -r /workspace/requirements.txt",
